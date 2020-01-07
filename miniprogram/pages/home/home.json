@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-button": "../../vant/button/index",
+    "van-grid": "../../vant/grid/index",
+    "van-grid-item": "../../vant/grid-item/index"
+  }
+}

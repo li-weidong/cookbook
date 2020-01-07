@@ -1,0 +1,7 @@
+<!--pages/home/home.wxml-->
+<view>
+<van-grid column-num="3" square>
+  <van-grid-item bind:click="click" icon="{{list[index].pic}}" id="{{list[index].classid}}" text="{{list[index].name}}" wx:for="{{list}}" />
+</van-grid>
+</view>
+

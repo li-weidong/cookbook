@@ -1,0 +1,8 @@
+/* pages/detail/detail.wxss */
+.name{
+  text-align: center;
+  line-height: 2rem;
+}
+.van-progress{
+  margin: 8px 0;
+}

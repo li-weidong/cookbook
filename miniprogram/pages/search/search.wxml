@@ -1,0 +1,36 @@
+<!--pages/search/search.wxml-->
+<view>
+  <van-search value="{{ value }}" placeholder="请输入搜索关键词" show-action bind:search="onSearch" bind:cancel="onCancel" />
+  <scroll-view scroll-y="true" style="height: 100vh;"bindscrolltolower="searchScrollLower">
+  <view class="search">
+    <view class='list clearfix'wx:for="{{list}}" id="{{list[index].id}}" bindtap="detail">
+      <view style="float:left" width='50%'>
+        <van-image width="45vw" radius="10" height="45vw" src="{{list[index].pic}}" />
+      </view>
+      <view class='list_r'>
+        <view>
+          <text class="dish-name">菜名：{{list[index].name}}</text>
+        </view>
+        <view>
+          <text class="text">适合人数：{{list[index].peoplenum}}</text>
+        </view>
+        <view>
+          <text class="text">烹饪时间：{{list[index].preparetime}}</text>
+        </view>
+        <view>
+          <text class="content">{{list[index].content}}</text>
+        </view>
+        <view>
+          <text class="tag">{{list[index].tag}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="center" wx:if="{{loading}}"><van-loading size="24px">加载中...</van-loading></view>
+  <view class="center"wx:if="{{lowline}}">我是有底线的，加载完毕</view>
+  <view class="center"wx:if="{{tip}}"><view>如搜索：“西红柿炒鸡蛋”</view> 
+  <view>建议搜索“鸡蛋”或者“西红柿”</view>
+  </view>
+  <view class="center"wx:if="{{none}}">无搜索结果,列如：“西红柿炒鸡蛋”建议搜索“鸡蛋”或者“西红柿”</view>
+  </scroll-view>
+</view>

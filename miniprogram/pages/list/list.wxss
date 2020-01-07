@@ -1,0 +1,85 @@
+/* pages/list/list.wxss */
+.classification{
+  line-height: 3rem;
+  position: fixed;
+  background: white;
+  display: inline-block;
+  z-index: 1000;
+  width: 100vw;
+}
+/* pages/search/search.wxss */
+
+.dish-name {
+  color: #fa8072;
+  font-size: 1rem;
+  text-overflow: -o-ellipsis-lastline; /*css3中webkit内核提供的一个方法类似ellipsis*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box; /*自适应盒子*/
+  -webkit-line-clamp: 1; /*此处为1行,如果是两行就改成2*/
+  -webkit-box-orient: vertical;
+}
+
+.name {
+  font-size: 1rem;
+  color: #fa8072;
+  text-overflow: -o-ellipsis-lastline; /*css3中webkit内核提供的一个方法类似ellipsis*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box; /*自适应盒子*/
+  -webkit-line-clamp: 1; /*此处为1行,如果是两行就改成2*/
+  -webkit-box-orient: vertical;
+}
+
+.search {
+  overflow: hidden;
+  padding-top:50px; 
+}
+
+.list {
+  padding: 0 10px;
+}
+
+.list_r {
+  float: left;
+  padding: 10px 0 10px 10px;
+  width: 46%;
+}
+
+.text {
+  font-size: 1rem;
+  text-overflow: -o-ellipsis-lastline; /*css3中webkit内核提供的一个方法类似ellipsis*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box; /*自适应盒子*/
+  -webkit-line-clamp: 1; /*此处为1行,如果是两行就改成2*/
+  -webkit-box-orient: vertical;
+}
+
+.content {
+  padding-top: 5px;
+  font-size: 1rem;
+  word-break: break-all; /*允许在单词内换行*/
+  text-align: left;
+  /* line-height: 45rpx; */
+  text-overflow: -o-ellipsis-lastline; /*css3中webkit内核提供的一个方法类似ellipsis*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box; /*自适应盒子*/
+  -webkit-line-clamp: 2; /*此处为1行,如果是两行就改成2*/
+  -webkit-box-orient: vertical;
+}
+
+.tag {
+  line-height: 2rem;
+  font-size: 1rem;
+  color: skyblue;
+  text-align: left;
+  /* line-height: 45rpx; */
+  text-overflow: -o-ellipsis-lastline; /*css3中webkit内核提供的一个方法类似ellipsis*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box; /*自适应盒子*/
+  -webkit-line-clamp: 1; /*此处为1行,如果是两行就改成2*/
+  -webkit-box-orient: vertical;
+}

@@ -1,0 +1,5 @@
+<!--pages/classification/classification.wxml-->
+<view class="listName">{{listName}}</view>
+<van-grid gutter="{{ 10 }}">
+  <van-grid-item  text="{{list[index].name}}" wx:for="{{ list }}" url="/pages/list/list?classid={{list[index].classid}}&classidName={{list[index].name}}" />
+</van-grid>

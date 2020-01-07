@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-image": "../../vant/image/index",
+    "van-tag": "../../vant/tag/index",
+    "van-progress": "../../vant/progress/index",
+    "van-divider": "../../vant/divider/index",
+    "van-toast": "../../vant/toast/index",
+    "van-icon": "../../vant/icon/index"
+  }
+}

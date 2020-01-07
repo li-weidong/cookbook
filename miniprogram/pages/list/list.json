@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-tag": "../../vant/tag/index",
+    "van-grid": "../../vant/grid/index",
+    "van-grid-item": "../../vant/grid-item/index",
+    "van-image": "../../vant/image/index",
+    "van-loading": "../../vant/loading/index"
+  }
+}
