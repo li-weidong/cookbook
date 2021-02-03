@@ -8,7 +8,7 @@ Component({
       // 在组件实例进入页面节点树时执行
       let self = this
       wx.request({
-        url: 'https://jisusrecipe.market.alicloudapi.com/recipe/class', //菜谱分类接口
+        url: 'https://caipu.market.alicloudapi.com/showapi_cpType', //菜谱分类接口
         data: {
         },
         header: {
@@ -16,24 +16,18 @@ Component({
           'Authorization': 'APPCODE 1714adafe243462f882805f9bc74805d'
         },
         success(res) {
-          console.log(res.data)
-          res.data.result[0].pic = "../../images/gongneng.png"
-          res.data.result[1].pic = "../../images/renqun.png"
-          res.data.result[2].pic = "../../images/jibingshaicha.png"
-          res.data.result[3].pic = "../../images/laonianrentizhibianshi.png"
-          res.data.result[4].pic = "../../images/caixiicon.png"
-          res.data.result[5].pic = "../../images/xiaochikuaican.png"
-          res.data.result[6].pic = "../../images/caipinpaixu.png"
-          res.data.result[7].pic = "../../images/kouwei.png"
-          res.data.result[8].pic = "../../images/jiagong.png"
-          res.data.result[9].pic = "../../images/chufangyongju.png"
-          res.data.result[10].pic = "../../images/changjing.png"
-          res.data.result = [{
-            name: "搜索",
-            pic: "../../images/sousuo.png"
-          }, ...res.data.result]
+          let list = res.data.showapi_res_body
+          console.log(list)
+          let menu = []
+          for (const key in list) {
+            console.log()
+            if (list.hasOwnProperty(key)&&typeof(list[key]) === 'object') {
+              console.log(list[key],key)
+              menu.push({name:key,pic:`../../images/${key}.png`})
+            }
+          }
           self.setData({
-            list: res.data.result,
+            list: menu,
           })
 
         }
